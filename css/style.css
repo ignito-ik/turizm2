@@ -1,0 +1,917 @@
+﻿/* ================= ПОДКЛЮЧЕНИЕ ШРИФТОВ ================= */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap'); 
+/* Подключаем шрифты из Google Fonts.
+   Это внешний сервис, который даёт красивые шрифты.
+   Мы используем Montserrat и Dancing Script */
+
+
+/* ================= ОБЩИЕ НАСТРОЙКИ ================= */
+
+* {
+    box-sizing: border-box; 
+    /* ВСЕМ элементам задаём модель box-sizing:
+       padding и border НЕ увеличивают размер блока,
+       это помогает легче верстать сайт */
+}
+
+body {
+    margin: 0; 
+    /* убираем стандартные отступы браузера */
+
+    font-family: "Montserrat", sans-serif; 
+    /* основной шрифт сайта */
+
+    font-size: 17px; 
+    /* базовый размер текста */
+}
+
+main {
+    min-height: 100vh; 
+    /* минимум высота = 100% высоты экрана,
+       чтобы футер не "прилипал" вверх */
+}
+
+
+/* ================= ШАПКА САЙТА ================= */
+
+header {
+    background: #264d54; 
+    /* тёмно-синий фон шапки */
+
+    position: fixed; 
+    /* фиксируем шапку сверху (она всегда видна) */
+
+    width: 100%; 
+    /* растягиваем на всю ширину */
+
+    top: 0; 
+    /* прижимаем к верхнему краю */
+
+    padding: 10px 15px 5px 15px; 
+    /* внутренние отступы: сверху/справа/снизу/слева */
+
+    z-index: 100; 
+    /* шапка всегда поверх контента */
+}
+
+
+/* ================= МЕНЮ НАВИГАЦИИ ================= */
+
+navbar {
+    margin-left: 30px; 
+    /* отступ слева от логотипа */
+
+    margin-bottom: 10px; 
+    /* отступ снизу */
+
+    display: inline-block; 
+    /* делает элемент "блочно-строчным" */
+
+    overflow: auto; 
+    /* защищает от переполнения */
+}
+
+navbar a {
+    color: white; 
+    /* цвет ссылок */
+
+    text-decoration: none; 
+    /* убираем подчёркивание */
+
+    margin-right: 20px; 
+    /* расстояние между ссылками */
+
+    font-size: 20px; 
+    /* размер текста */
+}
+
+navbar a:hover {
+    color: #f3deca; 
+    /* цвет при наведении */
+
+    text-decoration: underline 1px; 
+    /* появляется подчёркивание */
+}
+
+
+/* ================= ФУТЕР ================= */
+
+footer {
+    min-height: 80px; 
+    /* минимальная высота */
+
+    background: #264d54; 
+    /* цвет как у шапки */
+
+    text-align: center; 
+    /* текст по центру */
+
+    color: white; 
+    /* белый текст */
+
+    padding-top: 35px; 
+    /* отступ сверху */
+}
+
+
+/* ================= ТЕКСТ ================= */
+
+p {
+    line-height: 150%; 
+    /* расстояние между строками (читабельность) */
+
+    text-indent: 30px; 
+    /* красная строка */
+}
+
+
+/* ================= СПИСКИ ================= */
+
+li {
+    margin-top: 10px; 
+    /* отступ между пунктами */
+
+    padding-left: 15px; 
+    /* отступ слева */
+
+    list-style-image: linear-gradient(hsla(280, 82%, 57%, 0.685), hsla(280, 82%, 57%, 0.397)); 
+    /* кастомные маркеры списка (градиентные точки) */
+}
+
+
+/* ================= ЗАГОЛОВКИ ================= */
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0; 
+    /* убираем верхний отступ */
+
+    font-family: "Montserrat", cursive; 
+    /* шрифт заголовков */
+}
+
+h1 {
+    font-size: 270%; 
+    /* большой заголовок */
+}
+
+h2 {
+    font-size: 200%; 
+    /* средний заголовок */
+}
+
+
+/* ================= СЕКЦИИ ================= */
+
+section {
+    padding: 90px 15%; 
+    /* внутренние отступы сверху/снизу и по бокам */
+}
+
+
+/* ================= ЛОГОТИП ================= */
+
+.logo {
+    height: 50px; 
+    /* фиксированная высота логотипа */
+}
+
+
+/* ================= ГЛАВНЫЙ ЭКРАН ================= */
+
+#index {
+    background: linear-gradient(hsla(0, 0%, 0%, 0.582), #000000bd), url('../images/fly.jpg'); 
+    /* затемнённый фон + картинка */
+
+    background-size: cover; 
+    /* растягивает фон на весь блок */
+
+    min-height: 100vh; 
+    /* занимает весь экран */
+}
+
+.index-info {
+    margin-top: 25vh; 
+    /* отступ сверху (центрирование текста) */
+
+    text-align: center; 
+    /* центрируем текст */
+}
+
+.index-info h1 {
+    font-size: 350%; 
+    /* очень большой заголовок */
+
+    color: white; 
+    /* белый текст */
+
+    border: 2px solid gray; 
+    /* рамка */
+
+    display: inline-block; 
+    /* рамка только вокруг текста */
+
+    padding: 20px; 
+    /* внутренний отступ */
+
+    border-radius: 5px; 
+    /* скругление */
+
+    background-color: hsla(189, 38%, 24%, 0.598); 
+    /* полупрозрачный фон */
+}
+
+
+/* ================= ССЫЛКА ================= */
+
+.link-index {
+    color: white; 
+    /* белый текст */
+
+    text-decoration: underline #fa9483 2px; 
+    /* подчёркивание цветом */
+
+    font-size: 20px; 
+    /* размер */
+}
+
+.link-index:hover {
+    color: #fedeca; 
+    /* изменение цвета при наведении */
+}
+
+
+/* ================= ИНФО БЛОКИ ================= */
+
+.more-info {
+    background: linear-gradient(180deg, #f6fbfc 0%, #ffffff 100%); 
+    /* мягкий градиент */
+}
+
+.more-info-hero {
+    background: linear-gradient(120deg, #20444a, #2f6872); 
+    /* красивый градиент */
+
+    color: white; 
+    /* белый текст */
+
+    padding: 30px; 
+    /* внутренний отступ */
+
+    border-radius: 14px; 
+    /* скругление */
+
+    margin-bottom: 28px; 
+    /* отступ снизу */
+
+    box-shadow: rgba(38, 77, 84, 0.28) 0px 12px 30px; 
+    /* тень */
+}
+
+
+/* ================= СЕТКА КАРТОЧЕК ================= */
+
+.info-grid {
+    display: grid; 
+    /* включаем CSS grid */
+
+    grid-template-columns: repeat(3, minmax(220px, 1fr)); 
+    /* 3 колонки */
+
+    gap: 16px; 
+    /* расстояние между карточками */
+
+    margin: 20px 0 28px; 
+    /* отступ */
+}
+
+.info-card {
+    background: #ffffff; 
+    /* белый фон */
+
+    border: 1px solid #d5e7ea; 
+    /* рамка */
+
+    border-radius: 10px; 
+    /* скругление */
+
+    padding: 16px; 
+    /* внутренний отступ */
+
+    box-shadow: rgba(100, 100, 111, 0.08) 0px 7px 22px 0px; 
+    /* тень */
+}
+
+
+/* ================= ТЕКСТ В КАРТОЧКАХ ================= */
+
+.info-card h3 {
+    font-size: 170%; 
+    /* размер заголовка */
+
+    margin-bottom: 8px; 
+    /* отступ */
+}
+
+.info-card p {
+    text-indent: 0; 
+    /* убираем красную строку */
+
+    margin: 0; 
+    /* убираем отступы */
+}
+
+
+/* ================= БЛОКИ ================= */
+
+.info-block {
+    margin-top: 24px; 
+    /* отступ сверху */
+
+    padding: 20px 22px; 
+    /* внутренний отступ */
+
+    background: #eef7f8; 
+    /* светлый фон */
+
+    border-left: 6px solid #2f6872; 
+    /* акцентная линия слева */
+
+    border-radius: 8px; 
+    /* скругление */
+}
+
+
+/* ================= ЦЕНТРИРОВАНИЕ ================= */
+
+.centered {
+    text-align: center; 
+    /* центр текста */
+}
+
+
+/* ================= ВИДЕО / ФРЕЙМ ================= */
+
+.vframe {
+    width: 100%; 
+    /* ширина 100% */
+
+    height: 30vw; 
+    /* высота зависит от ширины */
+
+    border: 2px double #f3deca; 
+    /* рамка */
+
+    border-radius: 5px; 
+    /* скругление */
+
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; 
+    /* тень */
+}
+
+
+/* ================= ЛОКАЦИИ ================= */
+
+.loc {
+    overflow: auto; 
+    /* очистка float */
+
+    border-bottom: 3px #f3deca dashed; 
+    /* пунктирная линия */
+
+    margin-bottom: 10px; 
+    /* отступ */
+}
+
+.loc img {
+    height: 23vh; 
+    width: 23vh; 
+    /* квадратная картинка */
+
+    object-fit: cover; 
+    /* обрезка без искажений */
+
+    border-radius: 50%; 
+    /* круглая форма */
+
+    float:left; 
+    /* картинка слева */
+
+    margin-right: 15px; 
+    /* отступ справа */
+
+    margin-bottom: 15px; 
+    /* отступ снизу */
+}
+
+
+/* ================= КАРТА ================= */
+
+.harta {
+    width: 100%; 
+    /* на всю ширину */
+
+    height: 40vh; 
+    /* высота */
+}
+
+
+/* ================= СЕТКА (КОНТАКТЫ) ================= */
+
+.row {
+    overflow: auto; 
+    /* очистка float */
+}
+
+[class^="col-"] {
+    float: left; 
+    /* колонки в ряд */
+
+    padding: 0px 10px; 
+    /* отступ */
+}
+
+.col-50 {
+    width: 50%; 
+    /* половина экрана */
+}
+
+
+/* ================= КОНТАКТЫ ================= */
+
+.contacte {
+    border: 2px solid #f3deca; 
+    /* рамка */
+
+    border-radius: 5px; 
+    /* скругление */
+
+    background-color: #f3deca9b; 
+    /* фон */
+
+    padding: 5px 5%; 
+    /* отступ */
+
+    height: 330px; 
+    /* фиксированная высота */
+
+    margin-bottom: 15px; 
+    /* отступ */
+}
+
+
+/* ================= ФОРМА ================= */
+
+.cform {
+    border: 2px solid #f3deca;
+    border-radius: 5px;
+    background-color: #f3deca9b;
+    padding: 5px 5%;
+}
+
+.form-note {
+    text-indent: 0;
+    margin: 0 0 14px;
+    color: #264d54;
+    font-size: 15px;
+}
+
+.cform input, .cform textarea {
+    width: 100%; 
+    /* на всю ширину */
+
+    padding: 15px; 
+    /* внутренний отступ */
+
+    font-size: 15px; 
+    /* размер текста */
+
+    font-family: Arial;
+
+    margin-bottom: 10px; 
+    /* отступ */
+
+    padding: 4px 6px; 
+    /* уточнение отступа */
+}
+
+
+/* ================= БУРГЕР ================= */
+
+#hamburger {
+    color: white; 
+    font-size: 28px; 
+    position: absolute; 
+    right: 22px; 
+    top: 24px; 
+    cursor: pointer; 
+    display: none; 
+}
+
+
+/* ================= АДАПТИВ ================= */
+
+@media (max-width: 800px) {
+
+    body {
+        font-size: 16px; 
+        /* уменьшаем текст */
+    }
+
+    section {
+        padding: 90px 10px; 
+        /* уменьшаем боковые отступы */
+    }
+
+    .index-info h1 {
+        font-size: 250%; 
+        /* уменьшаем заголовок */
+    }
+
+    .vframe {
+        height: 55vw; 
+        /* адаптация видео */
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr; 
+        /* одна колонка */
+    }
+
+    .more-info-hero {
+        padding: 22px; 
+        /* меньше отступ */
+    }
+
+    [class^="col-"] {
+        width: 100% !important; 
+        /* колонки вниз */
+    }
+
+    navbar {
+        display: block; 
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    navbar a {
+        display: none; 
+        /* скрываем меню */
+    }
+
+    navbar.mobile a {
+        display: block; 
+        /* показываем меню */
+        text-align: center;
+    }
+
+    #hamburger {
+        display: block; 
+        /* показываем бургер */
+    }
+}
+
+
+/* ================= ТАБЛИЦА ================= */
+
+.tour-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0;
+    min-width: 680px;
+    background: white;
+}
+
+.tour-table th {
+    background-color: #264d54;
+    color: white;
+    padding: 10px;
+    white-space: nowrap;
+}
+
+.tour-table td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    white-space: nowrap;
+}
+
+.tour-table tr:hover {
+    background-color: #f3f3f3;
+}
+
+
+/* ================= ЦЕНЫ ================= */
+
+.tour-price {
+    color: #2f6872;
+    font-weight: bold;
+}
+
+
+/* ================= КНОПКИ ================= */
+
+.tour-btn {
+    background-color: #fa9483;
+    color: white;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.tour-btn:hover {
+    background-color: #e07a6a;
+}
+
+
+/* ================= НАВИГАЦИЯ СТРАН ================= */
+
+.country-nav {
+    background: #2f6872;
+    padding: 10px;
+    text-align: center;
+    margin: 20px 0;
+    border-radius: 8px;
+}
+
+.country-nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+.country-nav a:hover {
+    color: #f3deca;
+}
+
+
+/* ================= ГАЛЕРЕЯ ================= */
+
+.gallery {
+    text-align: center;
+    padding: 40px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+    filter: brightness(0.8);
+}
+
+
+/* ================= МОДАЛЬНОЕ ОКНО ================= */
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal img {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 10px;
+}
+
+
+/* ================= АУДИО-ПЛЕЕР ================= */
+
+.audio-widget {
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    width: min(320px, calc(100vw - 24px));
+    background: rgba(38, 77, 84, 0.96);
+    color: white;
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 12px 28px;
+    z-index: 1200;
+}
+
+.audio-widget-title {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.audio-widget-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.audio-hide-btn {
+    border: none;
+    background: transparent;
+    color: #f3deca;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 0;
+}
+
+.audio-hide-btn:hover {
+    color: white;
+}
+
+.audio-widget-controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.audio-btn {
+    border: none;
+    border-radius: 999px;
+    padding: 9px 14px;
+    background: #fa9483;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.audio-btn:hover {
+    background: #f07f6c;
+}
+
+.audio-btn-secondary {
+    background: rgba(255, 255, 255, 0.16);
+}
+
+.audio-btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.26);
+}
+
+.audio-volume-label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.audio-volume {
+    width: 100%;
+    accent-color: #fa9483;
+}
+
+.audio-status {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #f3deca;
+}
+
+.audio-widget-reopen {
+    display: none;
+    width: 100%;
+    border: none;
+    border-radius: 999px;
+    padding: 10px 14px;
+    margin-top: 6px;
+    background: #fa9483;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.audio-widget-hidden {
+    width: auto;
+    padding: 12px;
+}
+
+.audio-widget-hidden .audio-widget-header,
+.audio-widget-hidden .audio-widget-controls,
+.audio-widget-hidden .audio-volume-label,
+.audio-widget-hidden .audio-volume,
+.audio-widget-hidden .audio-status {
+    display: none;
+}
+
+.audio-widget-hidden .audio-widget-reopen {
+    display: block;
+    margin-top: 0;
+}
+
+
+/* ================= СТРАНИЦА ТАБЛИЦЫ ================= */
+
+.table-page-body {
+    background: linear-gradient(180deg, #f5fbfc 0%, #ffffff 100%);
+}
+
+.table-page {
+    padding-top: 110px;
+}
+
+.table-section {
+    padding-top: 24px;
+    padding-bottom: 32px;
+}
+
+.table-intro {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.table-intro p {
+    text-indent: 0;
+    margin: 10px auto 0;
+    max-width: 720px;
+}
+
+.tour-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    background: white;
+    border-radius: 16px;
+    box-shadow: rgba(38, 77, 84, 0.14) 0px 12px 32px;
+    padding: 8px;
+}
+
+.table-gallery {
+    padding-top: 20px;
+    padding-bottom: 60px;
+}
+
+
+/* ================= АДАПТИВ ДЛЯ ТАБЛИЦЫ ================= */
+
+@media (max-width: 800px) {
+    .table-page {
+        padding-top: 90px;
+    }
+
+    .table-section {
+        padding: 20px 10px 24px;
+    }
+
+    .table-intro h1 {
+        font-size: 220%;
+    }
+
+    .tour-table-wrapper {
+        border-radius: 12px;
+        padding: 6px;
+    }
+
+    .tour-table {
+        min-width: 560px;
+    }
+
+    .tour-table th,
+    .tour-table td {
+        padding: 12px 10px;
+        font-size: 15px;
+    }
+
+    .tour-btn {
+        display: inline-block;
+    }
+
+    .table-gallery {
+        padding: 16px 10px 40px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-grid img {
+        height: 220px;
+    }
+
+    .audio-widget {
+        right: 12px;
+        left: 12px;
+        bottom: 12px;
+        width: auto;
+        padding: 14px;
+    }
+
+    .audio-widget-controls {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Таблица туров | SkyWay Travel</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script src="../js/script.js" defer></script>
+</head>
+<body class="table-page-body">
+    <header>
+        <img class="logo" src="../images/logo.png" alt="Лого">
+        <navbar>
+            <a href="../index.html">Домой</a>
+            <a href="../pages/despre.html">О нас</a>
+            <a href="../pages/dostoprimechatel.html">Доступные места для туризма</a>
+            <a href="../pages/contacte.html">Контакты</a>
+            <a href="../pages/actia.html">Акции</a>
+            <a href="../pages/tabl.html">Таблица туров</a>
+        </navbar>
+        <i id="hamburger" onclick="mobileMenu()" class="fa-solid fa-bars"></i>
+    </header>
+
+    <main class="table-page">
+        <section class="table-section">
+            <div class="table-intro">
+                <h1>Таблица туров</h1>
+                <p>Сравните популярные направления, длительность поездки и стоимость тура.</p>
+            </div>
+
+            <div class="tour-table-wrapper">
+                <table class="tour-table">
+                    <thead>
+                        <tr>
+                            <th>Страна</th>
+                            <th>Город</th>
+                            <th>Длительность</th>
+                            <th>Цена</th>
+                            <th>Действие</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Италия</td>
+                            <td>Рим</td>
+                            <td>7 дней</td>
+                            <td class="tour-price">€850</td>
+                            <td>
+                                <a href="https://ru.wikipedia.org/wiki/%D0%98%D1%82%D0%B0%D0%BB%D0%B8%D1%8F" class="tour-btn" target="_blank" rel="noopener noreferrer">Подробнее</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Франция</td>
+                            <td>Париж</td>
+                            <td>5 дней</td>
+                            <td class="tour-price">€700</td>
+                            <td>
+                                <a href="https://ru.wikipedia.org/wiki/%D0%A4%D1%80%D0%B0%D0%BD%D1%86%D0%B8%D1%8F" class="tour-btn" target="_blank" rel="noopener noreferrer">Подробнее</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Турция</td>
+                            <td>Анкара</td>
+                            <td>10 дней</td>
+                            <td class="tour-price">€1000</td>
+                            <td>
+                                <a href="https://ru.wikipedia.org/wiki/%D0%A2%D1%83%D1%80%D1%86%D0%B8%D1%8F" class="tour-btn" target="_blank" rel="noopener noreferrer">Подробнее</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Вьетнам</td>
+                            <td>Ханой</td>
+                            <td>10 дней</td>
+                            <td class="tour-price">€900</td>
+                            <td>
+                                <a href="https://ru.wikipedia.org/wiki/%D0%92%D1%8C%D0%B5%D1%82%D0%BD%D0%B0%D0%BC" class="tour-btn" target="_blank" rel="noopener noreferrer">Подробнее</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Испания</td>
+                            <td>Барселона</td>
+                            <td>6 дней</td>
+                            <td class="tour-price">€600</td>
+                            <td>
+                                <a href="https://ru.wikipedia.org/wiki/%D0%98%D1%81%D0%BF%D0%B0%D0%BD%D0%B8%D1%8F" class="tour-btn" target="_blank" rel="noopener noreferrer">Подробнее</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="gallery table-gallery">
+            <h2>Популярные направления</h2>
+
+            <div class="gallery-grid">
+                <img src="../images/Italia.jpg" alt="Италия" onclick="openImage(this)">
+                <img src="../images/france.jpg" alt="Франция" onclick="openImage(this)">
+                <img src="../images/turcu.jpg" alt="Турция" onclick="openImage(this)">
+                <img src="../images/wetnam.jpg" alt="Вьетнам" onclick="openImage(this)">
+                <img src="../images/ispania.avif" alt="Испания" onclick="openImage(this)">
+            </div>
+        </section>
+    </main>
+
+    <div id="modal" class="modal" onclick="closeImage()">
+        <img id="modal-img" alt="Увеличенное изображение">
+    </div>
+</body>
+</html>
